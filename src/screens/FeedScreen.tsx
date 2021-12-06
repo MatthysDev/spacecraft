@@ -1,4 +1,5 @@
 import React from "react";
+import { useStarships } from "../hooks/useStarships";
 import {
   SafeAreaView,
   StyleSheet,
@@ -9,8 +10,6 @@ import {
 } from "react-native";
 import { Card, Paragraph, Title } from "react-native-paper";
 
-import { data } from "../../api/data";
-
 interface propsCard {
   name: string;
   model: string;
@@ -19,6 +18,13 @@ interface propsCard {
   cost_in_credits: string;
 }
 const FeedScreen = () => {
+  const { isLoading, isError, data } = useStarships();
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
+  if (isError) {
+    return <Text>:(</Text>;
+  }
   const renderItem = ({ item }: any) => (
     <FeedCard
       name={item.name}
