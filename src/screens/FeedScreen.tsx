@@ -62,7 +62,6 @@ const FeedScreen = () => {
 const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
     backgroundColor: "#000000",
   },
   container: {
@@ -71,7 +70,6 @@ const styles = StyleSheet.create({
   },
   card: {
     margin: 5,
-    padding: 5,
   },
   cardTitle: {
     fontSize: 16,
