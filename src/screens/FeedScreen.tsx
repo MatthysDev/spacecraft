@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  StatusBar,
-  View,
-  FlatList,
-} from "react-native";
+import { SafeAreaView, StyleSheet, View, FlatList } from "react-native";
 import { Card, Paragraph, Title } from "react-native-paper";
 
 import { data } from "../../api/data";
@@ -19,7 +12,7 @@ interface propsCard {
   cost_in_credits: string;
 }
 export const FeedScreen = () => {
-  const renderItem = ({ item }) => (
+  const renderItem = ({ item }: any) => (
     <FeedCard
       name={item.name}
       model={item.model}
@@ -49,11 +42,11 @@ export const FeedScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
-        <FlatList
+        {/* <FlatList
           data={data.results}
           renderItem={renderItem}
           keyExtractor={(item) => item.name}
-        />
+        /> */}
       </View>
     </SafeAreaView>
   );
@@ -67,6 +60,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
+    backgroundColor: "red",
   },
   card: {
     margin: 5,

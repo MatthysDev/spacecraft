@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { Button, Colors, TextInput } from "react-native-paper";
 
-import Header from "../components/Header";
+import { Header } from "../components/Header";
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");

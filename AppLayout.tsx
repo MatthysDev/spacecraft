@@ -11,16 +11,18 @@ interface Props {
 }
 
 export const AppLayout = ({ title, children, withFooter = false }: Props) => {
-  const isConnected = useIsConnected();
-  return isConnected ? (
-    <SafeAreaView style={styles.safeArea}>
-      <Headline style={styles.headerText}>{title}</Headline>
-      {children}
-      {withFooter && <View style={styles.footer} />}
-    </SafeAreaView>
-  ) : (
-    <Text style={styles.test}>Not connected</Text>
-  );
+  //const isConnected = useIsConnected();
+  // return <>{isConnected ? <Text>oui</Text> : <Text>Non</Text>}</>;
+  // if (isConnected) {
+  //   return (
+  //     <SafeAreaView style={styles.safeArea}>
+  //       <Headline style={styles.headerText}>{title}</Headline>
+  //       {children}
+  //       {withFooter && <View style={styles.footer} />}
+  //     </SafeAreaView>
+  //   );
+  // }
+  return <Text style={styles.test}>Not connected</Text>;
 };
 
 const styles = StyleSheet.create({

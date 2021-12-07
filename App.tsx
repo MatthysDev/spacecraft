@@ -1,9 +1,8 @@
 import React from "react";
-import { Text, View } from "react-native";
 import { NetworkProvider } from "react-native-offline";
 
 import { AppLayout } from "./AppLayout";
-import FeedScreen from "./src/screens/FeedScreen";
+import { FeedScreen } from "./src/screens/FeedScreen";
 
 export const App = () => {
   // Query data with fetchAsync
@@ -13,9 +12,7 @@ export const App = () => {
 
   return (
     <NetworkProvider>
-      <AppLayout title="Starships">
-        <FeedScreen />
-      </AppLayout>
+      <AppLayout title="Starships">{/* <FeedScreen /> */}</AppLayout>
     </NetworkProvider>
   );
 };
