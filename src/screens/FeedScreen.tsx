@@ -42,11 +42,11 @@ export const FeedScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
-        {/* <FlatList
+        <FlatList
           data={data.results}
           renderItem={renderItem}
           keyExtractor={(item) => item.name}
-        /> */}
+        />
       </View>
     </SafeAreaView>
   );
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
-    backgroundColor: "red",
   },
   card: {
     margin: 5,

@@ -1,18 +1,14 @@
-import React from "react";
-import { NetworkProvider } from "react-native-offline";
+// App.tsx
+import { LogBox } from "react-native";
+import { RootScreen as App } from "./src/screens/RootScreen";
+import StorybookUIRoot from "./storybook";
 
-import { AppLayout } from "./AppLayout";
-import { FeedScreen } from "./src/screens/FeedScreen";
+// Should we show storybook instead of our app?
+//
+// ⚠️ Leave this as `false` when checking into git.
+const SHOW_STORYBOOK = false;
 
-export const App = () => {
-  // Query data with fetchAsync
-  // const { status, error, data } = useQuery('starships', () =>
-  //   fetchAsync(`https://swapi.dev/api/starships/`)
-  // );
+const UI = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App;
+export default UI;
 
-  return (
-    <NetworkProvider>
-      <AppLayout title="Starships">{/* <FeedScreen /> */}</AppLayout>
-    </NetworkProvider>
-  );
-};
+LogBox.ignoreLogs(["Remote debugger"]);

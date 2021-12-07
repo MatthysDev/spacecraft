@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { Button, Colors, TextInput } from "react-native-paper";
-
+import { AppRoutes } from "../navigation/AppRoutes";
+import { useNavigation } from "@react-navigation/core";
 import { Header } from "../components/Header";
+import { Navigator } from "../navigation/Navigator";
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -13,9 +15,9 @@ export const LoginScreen = () => {
   function handleLogin() {
     console.log("login");
   }
-
+  const navigation = useNavigation();
   function navigateToTerms() {
-    // navigation.navigate(AppRoutes.TERMS_SCREEN);
+    navigation.navigate(AppRoutes.TERMS_SCREEN);
   }
 
   function toggleSecureIcon() {
@@ -24,6 +26,7 @@ export const LoginScreen = () => {
 
   return (
     <View>
+      <Navigator />
       <View style={styles.header}>
         <Header>SpaceCraft</Header>
       </View>
