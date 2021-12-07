@@ -1,16 +1,14 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import { Appbar, Title } from "react-native-paper";
 
 export const TermsScreen = () => {
-  function goBack() {
-    alert("goBack pressed!");
-  }
-
+  const navigation = useNavigation();
   return (
     <View>
       <Appbar.Header>
-        <Appbar.BackAction onPress={goBack} />
+        <Appbar.BackAction onPress={() => navigation.goBack()} />
         <Appbar.Content title="Terms and Conditions" />
       </Appbar.Header>
       <ScrollView style={{ padding: 32 }}>

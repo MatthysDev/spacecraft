@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { Button, Colors, TextInput } from "react-native-paper";
 import { AppRoutes } from "../navigation/AppRoutes";
-import { useNavigation } from "@react-navigation/core";
+import { useNavigation } from "@react-navigation/native";
 import { Header } from "../components/Header";
 import { Navigator } from "../navigation/Navigator";
 
@@ -26,7 +26,6 @@ export const LoginScreen = () => {
 
   return (
     <View>
-      <Navigator />
       <View style={styles.header}>
         <Header>SpaceCraft</Header>
       </View>
