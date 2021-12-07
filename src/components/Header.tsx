@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 import { Text } from "react-native-paper";
 import React from "react";
 
-const Header = (props: any) => {
+export const Header = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.header} {...props} />
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
-export default Header;

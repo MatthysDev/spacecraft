@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { Text, ScrollView, StyleSheet, View, SafeAreaView } from "react-native";
+import type { ReactNode } from "react";
+import React from "react";
+import { Text, StyleSheet, View, SafeAreaView } from "react-native";
 import { useIsConnected } from "react-native-offline";
 import { Colors, Headline } from "react-native-paper";
-import { white } from "react-native-paper/lib/typescript/styles/colors";
 
 interface Props {
   title: string;
@@ -10,7 +10,7 @@ interface Props {
   withFooter?: boolean;
 }
 
-const AppLayout = ({ title, children, withFooter = false }: Props) => {
+export const AppLayout = ({ title, children, withFooter = false }: Props) => {
   const isConnected = useIsConnected();
   return isConnected ? (
     <SafeAreaView style={styles.safeArea}>
@@ -22,8 +22,6 @@ const AppLayout = ({ title, children, withFooter = false }: Props) => {
     <Text style={styles.test}>Not connected</Text>
   );
 };
-
-export default AppLayout;
 
 const styles = StyleSheet.create({
   container: {

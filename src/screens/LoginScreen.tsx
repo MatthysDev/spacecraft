@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { Button, Colors, TextInput } from "react-native-paper";
+
 import Header from "../components/Header";
 
-const LoginScreen = () => {
+export const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isVisble, setIsVisible] = useState(true);
@@ -72,11 +73,7 @@ const styles = StyleSheet.create({
     height: 256,
     backgroundColor: Colors.purple500,
   },
-  headerText: {
-    color: Colors.white,
-    fontWeight: "bold",
-    textTransform: "uppercase",
-  },
+
   submitButton: {
     marginVertical: 32,
     marginHorizontal: 16,
@@ -88,5 +85,3 @@ const styles = StyleSheet.create({
     color: Colors.grey500,
   },
 });
-
-export default LoginScreen;

@@ -18,8 +18,8 @@ interface propsCard {
   hyperdrive_rating: string;
   cost_in_credits: string;
 }
-const FeedScreen = () => {
-  const renderItem = ({ item }: any) => (
+export const FeedScreen = () => {
+  const renderItem = ({ item }) => (
     <FeedCard
       name={item.name}
       model={item.model}
@@ -75,5 +75,3 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-
-export default FeedScreen;

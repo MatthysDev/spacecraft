@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, View } from "react-native";
-import AppLayout from "./AppLayout";
-
 import { NetworkProvider } from "react-native-offline";
+
+import { AppLayout } from "./AppLayout";
 import FeedScreen from "./src/screens/FeedScreen";
 
-const App = () => {
+export const App = () => {
   // Query data with fetchAsync
   // const { status, error, data } = useQuery('starships', () =>
   //   fetchAsync(`https://swapi.dev/api/starships/`)
@@ -19,5 +19,3 @@ const App = () => {
     </NetworkProvider>
   );
 };
-
-export default App;
