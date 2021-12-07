@@ -1,6 +1,6 @@
 import React from "react";
 import { NetworkProvider } from "react-native-offline";
-
+import { Navigator } from "../navigation/Navigator";
 import { AppLayout } from "../../AppLayout";
 // import { FeedScreen } from "./FeedScreen";
 import { LoginScreen } from "./LoginScreen";
@@ -13,9 +13,7 @@ export const RootScreen = () => {
 
   return (
     <NetworkProvider>
-      <AppLayout title="Starships">
-        <LoginScreen />
-      </AppLayout>
+      <Navigator />
     </NetworkProvider>
   );
 };
