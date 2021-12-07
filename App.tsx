@@ -1,5 +1,5 @@
 import React from "react";
-import { LogBox, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import AppLayout from "./AppLayout";
 
 import { NetworkProvider } from "react-native-offline";
@@ -19,5 +19,5 @@ const App = () => {
     </NetworkProvider>
   );
 };
-LogBox.ignoreLogs(["Remote debugger"]);
+
 export default App;
